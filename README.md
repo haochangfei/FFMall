@@ -1,5 +1,4 @@
 # FFMall
-
 ## 项目介绍
 商城系统
 
@@ -22,5 +21,6 @@ mall
 ├── FFMall-IFAP --interface AP 操作员后台接口模块
 ├── FFMall-IFIN --interface in 外围调用商城接口模块
 ├── FFMall-IFOUT --interface out 商城调用外围接口模块
+├── FFMall-TOOLS --商城独立工具 
 └── FFMall-DEMO --测试代码模块
 ```
