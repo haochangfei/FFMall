@@ -2,9 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.sf.hcf.ffmal</groupId>
     <artifactId>mall</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>mall</name>
     <description>sf and hcf</description>
     <packaging>pom</packaging> <!-- 父模块打包类型必须为pom-->
@@ -17,14 +19,24 @@
         <relativePath/><!-- lookup parent from repository -->
     </parent>
 
+    <!--配置子模块-->
+    <modules>
+        <module>FFMall-COMMON</module>
+    </modules>
+
     <!-- 在properties中统一控制依赖包的版本-->
     <properties>
+        <!--基础配置-->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!--开源版本-->
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <spring-boot-maven-plugin.version>2.3.7.RELEASE</spring-boot-maven-plugin.version>
+
+        <!--模块版本-->
+        <ffmall-common.version>0.0.1-SNAPSHOT</ffmall-common.version>
     </properties>
 
     <dependencies>
@@ -52,9 +64,16 @@
         </dependency>
     </dependencies>
 
+    <!--子模块继承依赖统一管理-->
     <dependencyManagement>
         <dependencies>
-           <!-- 配置公共模块 -->
+            <!--ffmall通用模块-->
+            <dependency>
+                <groupId>com.hcf.ffmall</groupId>
+                <artifactId>common</artifactId>
+                <version>${ffmall-common.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
