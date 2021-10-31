@@ -22,6 +22,7 @@
     <!--配置子模块-->
     <modules>
         <module>FFMall-COMMON</module>
+        <module>FFMall-DEMO</module>
     </modules>
 
     <!-- 在properties中统一控制依赖包的版本-->
@@ -34,6 +35,7 @@
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <spring-boot-maven-plugin.version>2.3.7.RELEASE</spring-boot-maven-plugin.version>
+        <mysql-connector-java.version>5.1.41</mysql-connector-java.version>
 
         <!--模块版本-->
         <ffmall-common.version>0.0.1-SNAPSHOT</ffmall-common.version>
@@ -72,6 +74,12 @@
                 <groupId>com.hcf.ffmall</groupId>
                 <artifactId>common</artifactId>
                 <version>${ffmall-common.version}</version>
+            </dependency>
+            <!--Mysql数据库驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
             </dependency>
 
         </dependencies>
